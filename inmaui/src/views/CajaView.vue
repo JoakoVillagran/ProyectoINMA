@@ -7,6 +7,7 @@
 
 
     <div class="sidenav d-flex flex-column justify-content-between h-100">
+    <div>
         <div >
             <a href="/bodega">
 
@@ -24,21 +25,19 @@
                 <i class="bi bi-person-square fs-2"></i>
                 Admin
             </a>
-            
         </div>
-    
-
-        <div class="container justify-content-between">
-            <form >
-                <a href="/" style="background-color: #00ADB5; border-color: #00ADB5">
+    </div>
+    <div class="container justify-content-between">
+        <form  >
+            <a href="/" style="background-color: #00ADB5; border-color: #00ADB5">
                 <i class="bi bi-box-arrow-right fs-2"></i>
                 <h6>Salir</h6>
             </a>
-            </form>
-        </div>
-        
-
+        </form>
     </div>
+
+
+</div>
 
     <div class="main">
         <div class="container-fluid">
