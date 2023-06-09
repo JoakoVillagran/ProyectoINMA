@@ -42,7 +42,7 @@ component: Admin
     component: ModPrd
 },
 {
-    path: '/Landing',
+    path: '/',
     name: 'Landing',
     component: Landing
 },
