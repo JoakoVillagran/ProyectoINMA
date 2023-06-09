@@ -1,49 +1,9 @@
 <template>
-   
-       <NavBar tituloPag="Vender Producto"></NavBar>
+    <NavBar tituloPag="Vender Producto"></NavBar>
 
     <div class="main">
         <div class="container-fluid">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Fecha</th>
-                        <th>Categoria</th>
-                        <th>Cantidad</th>
-                        <th>&nbsp;</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Pepsi</td>
-                        <td>01/01/2023</td>
-                        <td>Bebidas</td>
-                        <td>100</td>
-
-
-                        <td>
-                            <a class="btn btn-secondary"> Vender </a>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Helado</td>
-                        <td>01/01/2023</td>
-                        <td>Helados</td>
-                        <td>30</td>
-
-
-                        <td>
-                            <a class="btn btn-secondary"> Vender </a>
-
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <TablaInventario :mostrarBotonesBodega="false"></TablaInventario>
         </div>
 
 
@@ -69,9 +29,6 @@
                         <td>1000</td>
                         <td>2</td>
                         <td>2000</td>
-
-
-
                         <td> <a class="btn btn-danger"> Eliminar </a></td>
                     </tr>
                 </tbody>
@@ -90,11 +47,13 @@
 
 <script>
 import NavBar from '../components/NavBar.vue';
+import TablaInventario from '../components/TablaInventario.vue';
 
 export default {
     components: {
         NavBar,
+        TablaInventario,
     }
-    
+
 };
 </script>

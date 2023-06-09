@@ -1,65 +1,63 @@
 <template>
-<NavBar tituloPag="Modificar Usuario" :mostrarSidenav="false"></NavBar>
+  <NavBar tituloPag="Modificar Usuario" :mostrarSidenav="false"></NavBar>
 
-<div class="container justify-content-center ">
-  <div class="row justify-content-center">
-    <div class="col-md-6 col-lg-5">
-      <div class="login-wrap p-4 p-md-5">
-        <form >
-          <input type="hidden"/>
-          <div class="form-group">
-            <label class="col-form-label">Email</label>
-            <input type="email" class="form-control"
-                   placeholder="Ingrese su Email" required/>
-          </div>
-          <div>
-            <label class="col-form-label">Contrase&ntilde;a</label>
-            <input type="password"  class="form-control"
-                   required minlength="2" maxlength="10" placeholder="Ingrese su Contrase&ntilde;a"/>
-          </div>
-          <div>
-            <label class="col-form-label"> Nombre</label>
-            <input type="text"  class="form-control"
-                   required minlength="2" maxlength="20" placeholder="Ingrese su Nombre"/>
-          </div>
-
-          <div>
-            <label class="col-form-label">Rut</label>
-            <input type="text"  class="form-control"
-                   required minlength="2" maxlength="20" placeholder="Ingrese su Rut"/>
-          </div>
-          <div>
-            <label class="col-4 col-form-label">Roles: </label>
-            <div class="col-8">
-              
-                <input type="checkbox" 
-                        class="m-2"/>
-              
+  <div class="container justify-content-center ">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5">
+        <div class="login-wrap p-4 p-md-5">
+          <form>
+            <input type="hidden" />
+            <div class="form-group">
+              <label class="col-form-label">Email</label>
+              <input type="email" class="form-control" placeholder="Ingrese su Email" required />
             </div>
-          </div>
+            <div>
+              <label class="col-form-label">Contrase&ntilde;a</label>
+              <input type="password" class="form-control" required minlength="2" maxlength="10"
+                placeholder="Ingrese su Contrase&ntilde;a" />
+            </div>
+            <div>
+              <label class="col-form-label"> Nombre</label>
+              <input type="text" class="form-control" required minlength="2" maxlength="20"
+                placeholder="Ingrese su Nombre" />
+            </div>
 
-          <div>
-            <button type="submit" class="btn btn-primary" style="background-color: #00ADB5; border: #00ADB5">Aceptar</button>
-            <a href="/admin" type="button" class="btn btn-danger">Cancelar</a>
-          </div>
+            <div>
+              <label class="col-form-label">Rut</label>
+              <input type="text" class="form-control" required minlength="2" maxlength="20"
+                placeholder="Ingrese su Rut" />
+            </div>
+            <div>
+              <label class="col-4 col-form-label">Roles: </label>
+              <div class="col-8">
 
-        </form>
+                <input type="checkbox" class="m-2" />
+
+              </div>
+            </div>
+
+            <div>
+              <button type="submit" class="btn btn-primary"
+                style="background-color: #00ADB5; border: #00ADB5">Aceptar</button>
+              <a href="/admin" type="button" class="btn btn-danger">Cancelar</a>
+            </div>
+
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
 import NavBar from '../components/NavBar.vue';
 
 export default {
-    components: {
-        NavBar,
-    }
+  components: {
+    NavBar,
+  }
 
 };
 </script>
 
-<style>
-</style>
+<style></style>

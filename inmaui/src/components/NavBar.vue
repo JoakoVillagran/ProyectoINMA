@@ -36,7 +36,7 @@ export default {
     },
     mostrarSidenav: {
       type: Boolean,
-      default:true
+      default: true
     },
   }
 };
