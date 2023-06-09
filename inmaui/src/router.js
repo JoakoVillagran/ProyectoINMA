@@ -10,52 +10,52 @@ import Landing from './views/LandingPage.vue'
 
 
 const routes = [
-{
-path: '/admin',
-name: 'Admin',
-component: Admin
-},
-{
-    path: '/caja',
-    name: 'Caja',
-    component: Caja
-},
-{
-    path: '/modusr',
-    name: 'ModUser',
-    component: ModUsr
-},
-{
-    path: '/registrar',
-    name: 'Registrar',
-    component: Registro
-},
+    {
+        path: '/admin',
+        name: 'Admin',
+        component: Admin
+    },
+    {
+        path: '/caja',
+        name: 'Caja',
+        component: Caja
+    },
+    {
+        path: '/modusr',
+        name: 'ModUser',
+        component: ModUsr
+    },
+    {
+        path: '/registrar',
+        name: 'Registrar',
+        component: Registro
+    },
 
-{
-    path: '/login',
-    name: 'Login',
-    component: Login
-},
-{
-    path: '/modprod',
-    name: 'ModProd',
-    component: ModPrd
-},
-{
-    path: '/',
-    name: 'Landing',
-    component: Landing
-},
-{
-    path: '/bodega',
-    name: 'Bodega',
-    component: Bodega
+    {
+        path: '/login',
+        name: 'Login',
+        component: Login
+    },
+    {
+        path: '/modprod',
+        name: 'ModProd',
+        component: ModPrd
+    },
+    {
+        path: '/',
+        name: 'Landing',
+        component: Landing
+    },
+    {
+        path: '/bodega',
+        name: 'Bodega',
+        component: Bodega
     }
 ]
 
 const router = createRouter({
-history: createWebHistory(),
-routes
+    history: createWebHistory(),
+    routes
 });
 
 export default router;

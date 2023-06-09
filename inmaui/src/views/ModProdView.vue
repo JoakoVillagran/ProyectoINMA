@@ -1,11 +1,5 @@
 <template>
-<nav class="navbar navbar-custom">
-    <div class="container-fluid">
-        <span class="navbar-brand mb-0 px-5">Modificar Producto</span>
-
-    </div>
-
-</nav>
+<NavBar tituloPag="Modificar Producto" :mostrarSidenav="false"></NavBar>
 
 <div class="container justify-content-center ">
     <div class="row justify-content-center">
@@ -53,6 +47,14 @@
 </template>
 
 <script>
+import NavBar from '../components/NavBar.vue';
+
+export default {
+    components: {
+        NavBar,
+    }
+
+};
 </script>
 
 <style>
