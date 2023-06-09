@@ -107,7 +107,11 @@
                 <td >Pepsi</td>
                 <td >01/01/2023</td>
                 <td >Bebidas</td>
-                <td >100</td>
+                <td >
+                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar bg-warning" style="width: 25%">25</div>
+</div>
+                </td>
 
 
                 <td>
@@ -120,7 +124,28 @@
                     <td >Helado</td>
                     <td >01/01/2023</td>
                     <td >Helados</td>
-                    <td >30</td>
+                    <td >
+                        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar bg-success" style="width: 100%">100</div>
+</div>
+                    </td>
+
+
+                <td>
+                    <a href="/modprod" class="btn btn-secondary"> Editar </a>
+                    <a  class="btn btn-danger"> Eliminar </a>
+                </td>
+            </tr>
+            <tr>
+                <td >3</td>
+                    <td >Papas fritas</td>
+                    <td >01/01/2023</td>
+                    <td >Snack</td>
+                    <td >
+                        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar bg-danger" style="width: 5%">0</div>
+</div>
+                    </td>
 
 
                 <td>
