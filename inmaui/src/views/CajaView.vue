@@ -7,31 +7,33 @@
 
 
     <div class="sidenav d-flex flex-column justify-content-between h-100">
-        <div>
+        <div >
+            <a href="/bodega">
 
-            <a  data-bs-toggle="tooltip">
-    
                 <i class="bi bi-box2 fs-3"></i>
                 Bodega
             </a>
-            <a  data-bs-toggle="tooltip">
-    
+        </div>
+            <a href="/caja">
+
                 <i class="bi bi-cart2 fs-1"></i>
                 Caja
             </a>
-            <a  data-bs-toggle="tooltip">
-    
+        <div >
+            <a href="/admin">
                 <i class="bi bi-person-square fs-2"></i>
                 Admin
             </a>
+            
         </div>
+    
 
         <div class="container justify-content-between">
             <form >
-                <button style="background-color: #00ADB5; border-color: #00ADB5" >
-                    <i class="bi bi-box-arrow-right fs-2"></i>
-                    <h6>Salir</h6>
-                </button>
+                <a href="/login" style="background-color: #00ADB5; border-color: #00ADB5">
+                <i class="bi bi-box-arrow-right fs-2"></i>
+                <h6>Salir</h6>
+            </a>
             </form>
         </div>
         
@@ -123,7 +125,9 @@
         </div>
     </div>
 </template>
+
 <script>
 </script>
+
 <style>
 </style>

@@ -9,19 +9,19 @@
 <div class="sidenav d-flex flex-column justify-content-between h-100">
     <div>
         <div >
-            <a>
+            <a href="/bodega">
 
                 <i class="bi bi-box2 fs-3"></i>
                 Bodega
             </a>
         </div>
-            <a>
+            <a href="/caja">
 
                 <i class="bi bi-cart2 fs-1"></i>
                 Caja
             </a>
         <div >
-            <a >
+            <a href="/admin">
                 <i class="bi bi-person-square fs-2"></i>
                 Admin
             </a>
@@ -29,10 +29,10 @@
     </div>
     <div class="container justify-content-between">
         <form  >
-            <button style="background-color: #00ADB5; border-color: #00ADB5">
+            <a href="/login" style="background-color: #00ADB5; border-color: #00ADB5">
                 <i class="bi bi-box-arrow-right fs-2"></i>
                 <h6>Salir</h6>
-            </button>
+            </a>
         </form>
     </div>
 
@@ -62,7 +62,7 @@
                         <td>Cajero</td>
                         <td>email@email.com</td>
                         <td>
-                            <a class="btn btn-secondary"> Modificar
+                            <a href="/modusr" class="btn btn-secondary"> Modificar
                                 Usuario </a>
                             <a class="btn btn-danger"> Quitar </a>
                         </td>
@@ -73,15 +73,17 @@
         </div>
     </div>
     <div style="text-align: right; ">
-        <a type="button" class="btn btn-primary"
+        <a href="/registrar" type="button" class="btn btn-primary"
            style="background-color:#00ADB5; border: #00ADB5;"><span
                 class="bi bi-plus-lg"></span> Nuevo Usuario
         </a>
     </div>
 </div>
 </template>
+
 <script>
 </script>
+
 <style>
 .sidenav {
             height: 100%;

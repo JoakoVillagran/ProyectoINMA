@@ -57,21 +57,19 @@
 
     <div>
         <div >
-            <a>
+            <a href="/bodega">
 
                 <i class="bi bi-box2 fs-3"></i>
                 Bodega
             </a>
         </div>
-        <div>
-            <a>
+            <a href="/caja">
 
                 <i class="bi bi-cart2 fs-1"></i>
                 Caja
             </a>
-        </div>
         <div >
-            <a>
+            <a href="/admin">
                 <i class="bi bi-person-square fs-2"></i>
                 Admin
             </a>
@@ -81,10 +79,10 @@
 
     <div class="container justify-content-between">
         <form>
-            <button style="background-color: #00ADB5; border-color: #00ADB5">
+            <a href="/login" style="background-color: #00ADB5; border-color: #00ADB5">
                 <i class="bi bi-box-arrow-right fs-2"></i>
                 <h6>Salir</h6>
-            </button>
+            </a>
         </form>
     </div>
 
@@ -113,7 +111,7 @@
 
 
                 <td>
-                    <a  class="btn btn-secondary"> Editar </a>
+                    <a href="/modprod" class="btn btn-secondary"> Editar </a>
                     <a  class="btn btn-danger"> Eliminar </a>
                 </td>
             </tr>
@@ -126,7 +124,7 @@
 
 
                 <td>
-                    <a  class="btn btn-secondary"> Editar </a>
+                    <a href="/modprod" class="btn btn-secondary"> Editar </a>
                     <a  class="btn btn-danger"> Eliminar </a>
                 </td>
             </tr>
@@ -137,7 +135,9 @@
 
 </div>
 </template>
+
 <script>
 </script>
+
 <style>
 </style>
