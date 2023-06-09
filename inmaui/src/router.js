@@ -6,6 +6,7 @@ import Login from './views/LoginView.vue'
 import Registro from './views/RegistrarView.vue'
 import ModUsr from './views/ModUsrView.vue'
 import ModPrd from './views/ModProdView.vue'
+import Landing from './views/LandingPage.vue'
 
 
 const routes = [
@@ -39,6 +40,11 @@ component: Admin
     path: '/modprod',
     name: 'ModProd',
     component: ModPrd
+},
+{
+    path: '/Landing',
+    name: 'Landing',
+    component: Landing
 },
 {
     path: '/bodega',
