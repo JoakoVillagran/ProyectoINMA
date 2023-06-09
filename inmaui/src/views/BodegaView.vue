@@ -79,7 +79,7 @@
 
     <div class="container justify-content-between">
         <form>
-            <a href="/login" style="background-color: #00ADB5; border-color: #00ADB5">
+            <a href="/landing" style="background-color: #00ADB5; border-color: #00ADB5">
                 <i class="bi bi-box-arrow-right fs-2"></i>
                 <h6>Salir</h6>
             </a>
