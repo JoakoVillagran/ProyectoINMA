@@ -18,15 +18,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>11222333-4</td>
-                                <td>Osvaldo</td>
-                                <td>Cajero</td>
-                                <td>email@email.com</td>
+                            <tr v-for="usuario in usuarios" :key="usuario.id">
+                                <td>{{ usuario.rut }}</td>
+                                <td>{{ usuario.nombre }}</td>
+                                <td>{{ usuario.rol }}</td>
+                                <td>{{ usuario.email }}</td>
                                 <td>
-                                    <button class="btn btn-secondary mr-2"
-                                        onclick="window.location.href='/modusr'">Modificar Usuario</button>
-                                    <button class="btn btn-danger">Quitar</button>
+                                    <button class="btn btn-secondary mr-2" @click="modificarUsuario(usuario._id)">Modificar
+                                        Usuario</button>
+                                    <button class="btn btn-danger" @click="eliminarUsuario(usuario._id)">Quitar</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -35,21 +35,49 @@
             </div>
         </div>
         <div style="text-align: right; ">
-            <a href="/registrar" type="button" class="btn btn-primary"
-                style="background-color:#00ADB5; border: #00ADB5;"><span class="bi bi-plus-lg"></span> Nuevo Usuario
+            <a href="/registrar" type="button" class="btn btn-primary" style="background-color:#00ADB5; border: #00ADB5;">
+                <span class="bi bi-plus-lg"></span> Nuevo Usuario
             </a>
         </div>
     </div>
 </template>
-
+  
 <script>
 import NavBar from '../components/NavBar.vue';
+import axios from 'axios';
 
 export default {
     components: {
         NavBar,
+    },
+    data() {
+        return {
+            usuarios: []
+        };
+    },
+    mounted() {
+        this.obtenerUsuarios();
+    },
+    methods: {
+        obtenerUsuarios() {
+            axios.get('http://localhost:3000/usuarios')
+                .then(response => {
+                    this.usuarios = response.data;
+                  
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        },
+        modificarUsuario(usuarioId) {
+            // Lógica para modificar usuario
+            console.log('Modificar usuario', usuarioId);
+        },
+        eliminarUsuario(usuarioId) {
+            // Lógica para eliminar usuario
+            console.log('Eliminar usuario', usuarioId);
+        }
     }
-
 };
 </script>
 
