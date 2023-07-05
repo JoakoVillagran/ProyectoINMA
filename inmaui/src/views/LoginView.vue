@@ -45,12 +45,6 @@ export default {
             contrasena: ''
         }
     },
-    mounted() {
-        const token = localStorage.getItem('token');
-        if (token) {
-            axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-        }
-    },
     methods: {
         login() {
             const loginData = {
