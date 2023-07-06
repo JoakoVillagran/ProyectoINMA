@@ -36,7 +36,7 @@ export default {
     salir() {
       localStorage.removeItem('token');
     }
-  }
+  } 
 };
 </script>
   

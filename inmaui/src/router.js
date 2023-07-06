@@ -6,6 +6,7 @@ import Login from './views/LoginView.vue'
 import Registro from './views/RegistrarView.vue'
 import ModUsr from './views/ModUsrView.vue'
 import ModPrd from './views/ModProdView.vue'
+import ModContra from './views/ModPassView.vue'
 import Landing from './views/LandingPage.vue'
 
 
@@ -24,6 +25,11 @@ const routes = [
         path: '/modusr/:id',
         name: 'ModUser',
         component: ModUsr
+    },
+    {
+        path: '/modcontra/:id',
+        name: 'ModContra',
+        component: ModContra
     },
     {
         path: '/registrar',

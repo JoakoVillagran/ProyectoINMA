@@ -12,16 +12,10 @@
               <input type="email" class="form-control" v-model="usuario.email" placeholder="Ingrese su Email" required />
             </div>
             <div>
-              <label class="col-form-label">Contraseña</label>
-              <input type="password" class="form-control" v-model="usuario.contrasena" minlength="2" maxlength="10"
-                placeholder="Ingrese su Contraseña" />
-            </div>
-            <div>
               <label class="col-form-label">Nombre</label>
               <input type="text" class="form-control" v-model="usuario.nombre" required minlength="2" maxlength="20"
                 placeholder="Ingrese su Nombre" />
             </div>
-
             <div>
               <label class="col-form-label">RUT</label>
               <input type="text" class="form-control" v-model="usuario.rut" required minlength="2" maxlength="20"

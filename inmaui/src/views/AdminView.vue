@@ -24,9 +24,14 @@
                                 <td>{{ usuario.rol }}</td>
                                 <td>{{ usuario.email }}</td>
                                 <td>
-                                    <button class="btn btn-secondary mr-2" @click="modificarUsuario(usuario._id)">Modificar
+                                    <button class="btn btn-primary" style="margin-right: 5px; "
+                                        @click="modificarUsuario(usuario._id)">Modificar
                                         Usuario</button>
+                                    <button class="btn btn-secondary" style="margin-right: 5px;"
+                                        @click="modificarContrasena(usuario._id)">Modificar
+                                        Contraseña</button>
                                     <button class="btn btn-danger" @click="eliminarUsuario(usuario._id)">Quitar</button>
+
                                 </td>
                             </tr>
                         </tbody>
@@ -69,8 +74,11 @@ export default {
                 });
         },
         modificarUsuario(usuarioId) {
-            console.log(usuarioId);
+
             this.$router.push(`modusr/${usuarioId}`);
+        },
+        modificarContrasena(usuarioId) {
+            this.$router.push(`modcontra/${usuarioId}`);
         },
         eliminarUsuario(usuarioId) {
             axios.delete(`http://localhost:3000/delete/${usuarioId}`)
@@ -116,6 +124,8 @@ export default {
     font-size: 20px;
     padding: 0px 20px;
 }
+
+
 
 @media screen and (max-height: 450px) {
     .sidenav {
