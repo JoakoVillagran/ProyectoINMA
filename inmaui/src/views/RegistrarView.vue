@@ -43,7 +43,7 @@
                         </div>
 
                         <div>
-                            <a href="/admin" type="button" class="btn btn-danger">Cancelar</a>
+                            <a href="/admin" type="button" class="btn btn-danger my-3">Cancelar</a>
                             <button type="submit" class="btn btn-primary"
                                 style="background-color: #00ADB5; border: #00ADB5">Aceptar</button>
                         </div>
