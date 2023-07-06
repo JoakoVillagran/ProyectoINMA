@@ -27,7 +27,7 @@
               <input type="text" class="form-control" v-model="usuario.rut" required minlength="2" maxlength="20"
                 placeholder="Ingrese su RUT" />
             </div>
-            <div>
+            <div v-if="usuario._id != '64a634bef6928f6274d30499'">
               <label class="col-4 col-form-label">Roles:</label>
               <div class="col-8">
                 <select v-model="usuario.rol" class="form-control">
@@ -39,7 +39,7 @@
             </div>
 
             <div>
-              <button type="submit" class="btn btn-primary"
+              <button type="submit" class="btn btn-primary my-3"
                 style="background-color: #00ADB5; border: #00ADB5">Aceptar</button>
               <a href="/admin" type="button" class="btn btn-danger">Cancelar</a>
             </div>
@@ -47,6 +47,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -87,8 +88,9 @@ export default {
     },
     guardarCambios() {
       axios.put(`http://localhost:3000/modusr/${this.usuario._id}`, this.usuario)
-        .then(
-          this.$router.push('/admin'))
+        .then(() => {
+          this.$router.push('/admin');
+        })
         .catch(error => {
           console.error(error);
           alert('Error al guardar los cambios');
