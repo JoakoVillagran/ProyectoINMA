@@ -63,15 +63,16 @@ export default {
             axios.get('http://localhost:3000/usuarios')
                 .then(response => {
                     this.usuarios = response.data;
-                  
+
                 })
                 .catch(error => {
                     console.error(error);
                 });
         },
         modificarUsuario(usuarioId) {
-            // Lógica para modificar usuario
-            console.log('Modificar usuario', usuarioId);
+            // Redirigir a la vista ModUsrView.vue con el ID del usuario como parámetro
+            console.log(usuarioId);
+            this.$router.push(`modusr/${usuarioId}`);
         },
         eliminarUsuario(usuarioId) {
             // Lógica para eliminar usuario

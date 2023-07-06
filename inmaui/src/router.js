@@ -21,7 +21,7 @@ const routes = [
         component: Caja
     },
     {
-        path: '/modusr',
+        path: '/modusr/:id',
         name: 'ModUser',
         component: ModUsr
     },
