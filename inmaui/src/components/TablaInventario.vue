@@ -123,21 +123,24 @@ export default {
         venderProducto(producto) {
             if (producto.cantidadVender > 0) {
                 const productoId = producto._id;
-                const cantidad = producto.cantidadVender;
+                const cantidadVendida = producto.cantidadVender;
 
                 axios.post('http://localhost:3000/venta', {
                     productoId,
-                    cantidad,
+                    cantidad: cantidadVendida,
                 })
                     .then(response => {
                         console.log(response.data);
-                        window.location.reload()
+                        producto.cantidad -= cantidadVendida;
+                        producto.cantidadVender = 0;
+                        this.$emit('producto-vendido');
                     })
                     .catch(error => {
-                        alert(error.response.data.message)
+                        alert(error.response.data.message);
                     });
             }
         },
+
     },
     computed: {
         productosFiltrados() {
@@ -153,9 +156,3 @@ export default {
     }
 };
 </script>
-
-<style>
-.input-container {
-    text-align: left;
-}
-</style>

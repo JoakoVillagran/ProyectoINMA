@@ -3,7 +3,8 @@
 
     <div class="main">
         <div class="container-fluid">
-            <TablaInventario :mostrarBotonesBodega="false"></TablaInventario>
+            <TablaInventario :mostrarBotonesBodega="false" @producto-vendido="obtenerProductosCarrito"></TablaInventario>
+
         </div>
 
         <div class="container-fluid">
