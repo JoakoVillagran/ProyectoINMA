@@ -33,13 +33,20 @@
                 </tbody>
             </table>
 
-            <div style="text-align: right;">
-                <p>Total: ${{ calcularTotalCarrito }}</p>
-                <button type="button" class="btn btn-success" style="background-color:#05EA53; border: #05EA53"
-                    @click="guardarBoleta">
-                    Finalizar
-                </button>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <label for="correo">Correo Electrónico:</label><br>
+                    <input type="email" id="correo" v-model="correo"><br>
+                </div>
+                <div>
+                    <p>Total: ${{ calcularTotalCarrito }}</p>
+                    <button type="button" class="btn btn-success" style="background-color:#05EA53; border: #05EA53"
+                        @click="guardarBoleta">
+                        Finalizar
+                    </button>
+                </div>
             </div>
+
         </div>
     </div>
 </template>
@@ -57,6 +64,7 @@ export default {
     data() {
         return {
             productos: [],
+            correo: '',
         };
     },
     mounted() {
@@ -76,7 +84,7 @@ export default {
             return producto.precio * producto.cantidad;
         },
         guardarBoleta() {
-            axios.post('http://localhost:3000/guardarBoleta')
+            axios.post('http://localhost:3000/guardarBoleta', { correo: this.correo })
                 .then(response => {
                     console.log(response.data);
                     this.obtenerProductosCarrito();
