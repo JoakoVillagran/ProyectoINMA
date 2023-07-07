@@ -7,6 +7,7 @@ import Registro from './views/RegistrarView.vue'
 import ModUsr from './views/ModUsrView.vue'
 import ModPrd from './views/ModProdView.vue'
 import ModContra from './views/ModPassView.vue'
+import Boleta from './views/BoletaView.vue'
 import Landing from './views/LandingPage.vue'
 
 
@@ -56,6 +57,11 @@ const routes = [
         path: '/bodega',
         name: 'Bodega',
         component: Bodega
+    },
+    {
+        path: '/boleta',
+        name: 'Boleta',
+        component: Boleta
     }
 ]
 

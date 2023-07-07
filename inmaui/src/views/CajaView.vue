@@ -26,14 +26,14 @@
                         <td>{{ producto.precio }}</td>
                         <td>${{ calcularTotal(producto) }}</td>
                         <td>
-                            <a class="btn btn-danger">Eliminar</a>
+                            <a class="btn btn-danger" @click="eliminarDeBoleta(producto._id)">Eliminar</a>
                         </td>
                     </tr>
                 </tbody>
             </table>
 
             <div style="text-align: right;">
-                <a class="btn btn-danger">Limpiar</a>
+                <p>Total: ${{ calcularTotalCarrito }}</p>
                 <button type="button" class="btn btn-success" style="background-color:#05EA53; border: #05EA53"
                     @click="guardarBoleta">
                     Finalizar
@@ -55,7 +55,7 @@ export default {
     },
     data() {
         return {
-            productos: [], 
+            productos: [],
         };
     },
     mounted() {
@@ -63,7 +63,7 @@ export default {
     },
     methods: {
         obtenerProductosCarrito() {
-            axios.get('http://localhost:3000/carrito') 
+            axios.get('http://localhost:3000/carrito')
                 .then(response => {
                     this.productos = response.data;
                 })
@@ -75,14 +75,29 @@ export default {
             return producto.precio * producto.cantidad;
         },
         guardarBoleta() {
-            axios.post('http://localhost:3000/guardarBoleta') 
+            axios.post('http://localhost:3000/guardarBoleta')
                 .then(response => {
                     console.log(response.data);
-                    
+                    this.obtenerProductosCarrito();
                 })
                 .catch(error => {
                     console.error(error);
                 });
+        },
+        eliminarDeBoleta(productoId) {
+            axios.post('http://localhost:3000/eliminardeboleta', { productoId })
+                .then(response => {
+                    console.log(response.data);
+                    window.location.reload()
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        },
+    },
+    computed: {
+        calcularTotalCarrito() {
+            return this.productos.reduce((total, producto) => total + producto.precio * producto.cantidad, 0);
         },
     },
 };

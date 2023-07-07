@@ -12,11 +12,18 @@
         Caja
       </a>
       <div>
+        <div>
+          <a href="/boleta">
+            <i class="bi bi-receipt fs-2"></i>
+            Boleta
+          </a>
+        </div>
         <a href="/admin">
           <i class="bi bi-person-square fs-2"></i>
           Admin
         </a>
       </div>
+
     </div>
     <div class="container justify-content-between">
       <form>
@@ -36,7 +43,7 @@ export default {
     salir() {
       localStorage.removeItem('token');
     }
-  } 
+  }
 };
 </script>
   

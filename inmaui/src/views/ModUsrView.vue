@@ -25,8 +25,7 @@
               <label class="col-4 col-form-label">Roles:</label>
               <div class="col-8">
                 <select v-model="usuario.rol" class="form-control">
-                  <option value="CAJERO">Cajero</option>
-                  <option value="BODEGUERO">Bodeguero</option>
+                  <option value="TRABAJADOR">Trabajador</option>
                   <option value="ADMIN">Admin</option>
                 </select>
               </div>

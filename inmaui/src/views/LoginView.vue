@@ -57,7 +57,7 @@ export default {
                     const token = response.data.token;
                     localStorage.setItem('token', token);
                     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-                    this.$router.push('/admin');
+                    this.$router.push('/caja');
                 })
                 .catch(error => {
                     if (error.response) {
