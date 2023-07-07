@@ -61,7 +61,6 @@ export default {
                 })
                 .catch(error => {
                     if (error.response) {
-                        // Manejar errores de respuesta del servidor
                         if (error.response.status === 404) {
                             alert('Usuario no encontrado');
                         } else if (error.response.status === 400) {
@@ -70,7 +69,6 @@ export default {
                             console.error(error);
                         }
                     } else {
-                        // Manejar errores de solicitud
                         console.error(error);
                     }
                 });
@@ -79,4 +77,3 @@ export default {
 };
 </script>
 
-<style></style>

@@ -88,7 +88,6 @@ export default {
                     this.$router.push('/admin');
                 })
                 .catch(error => {
-                    // Manejo de errores
                     console.error(error);
                 });
         },

@@ -24,18 +24,27 @@
                     </div>
                 </td>
                 <td v-if="mostrarBotonesBodega">
-                    <button class="btn btn-secondary" style="margin-right: 5px; "
-                        @click="modificarProducto(producto._id)">Editar</button>
-                    <button class="btn btn-danger" @click="eliminarProducto(producto._id)">Eliminar</button>
+                    <button class="btn btn-secondary" style="margin-right: 5px;" @click="modificarProducto(producto._id)">
+                        Editar
+                    </button>
+                    <button class="btn btn-danger" @click="eliminarProducto(producto._id)">
+                        Eliminar
+                    </button>
                 </td>
                 <td v-else>
-                    <a class="btn btn-secondary">Vender</a>
+                    <div class="input-group">
+                        <input type="number" class="form-control" v-model="producto.cantidadVender" min="0"
+                            :max="producto.cantidad" />
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" @click="venderProducto(producto)">Vender</button>
+                        </div>
+                    </div>
                 </td>
             </tr>
         </tbody>
     </table>
 </template>
-
+  
 <script>
 import axios from 'axios';
 
@@ -61,6 +70,7 @@ export default {
                 .then(response => {
                     this.productos = response.data.map(producto => {
                         producto.maxCantidad = producto.cantidad;
+                        producto.cantidadVender = 0; // Inicializar la cantidad a vender en 0
                         return producto;
                     });
                 })
@@ -105,6 +115,26 @@ export default {
         modificarProducto(productId) {
             this.$router.push(`modprod/${productId}`);
         },
+        venderProducto(producto) {
+            if (producto.cantidadVender > 0) {
+                const productoId = producto._id;
+                const cantidad = producto.cantidadVender;
+
+
+                axios.post('http://localhost:3000/venta', {
+                    productoId,
+                    cantidad,
+                })
+                    .then(response => {
+                        console.log(response.data);
+                        window.location.reload()
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
+            }
+        },
     }
 };
 </script>
+  
