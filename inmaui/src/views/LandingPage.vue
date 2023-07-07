@@ -11,11 +11,7 @@
   
 <script>
 export default {
-  methods: {
-    redirectToSomething() {
-      // Aquí puedes agregar la lógica para redirigir a otra página o realizar una acción
-    }
-  }
+
 }
 </script>
   

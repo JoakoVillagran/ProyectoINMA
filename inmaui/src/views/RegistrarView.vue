@@ -77,14 +77,11 @@ export default {
                 .then(response => {
                     console.log(response)
                     console.log('Usuario registrado con éxito');
-                    this.$router.push('/admin')
-                    // Lógica adicional después de registrar el usuario
+                    this.$router.push('/admin');
                 })
                 .catch(error => {
-
                     alert(error.response.data.message)
                     console.error('Error al registrar el usuario:', error);
-                    // Lógica de manejo de error
                 });
         }
     }

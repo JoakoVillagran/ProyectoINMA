@@ -43,7 +43,7 @@ const routes = [
         component: Login
     },
     {
-        path: '/modprod',
+        path: '/modprod/:id',
         name: 'ModProd',
         component: ModPrd
     },

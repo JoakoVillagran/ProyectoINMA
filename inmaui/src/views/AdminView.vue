@@ -74,7 +74,6 @@ export default {
                 });
         },
         modificarUsuario(usuarioId) {
-
             this.$router.push(`modusr/${usuarioId}`);
         },
         modificarContrasena(usuarioId) {
@@ -83,7 +82,7 @@ export default {
         eliminarUsuario(usuarioId) {
             axios.delete(`http://localhost:3000/delete/${usuarioId}`)
                 .then(() => {
-                    window.location.reload();
+                    this.obtenerUsuarios();
                 })
                 .catch(error => {
                     alert(error.response.data.message)
